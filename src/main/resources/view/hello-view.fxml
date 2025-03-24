@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="553.0" maxWidth="837.0" minHeight="553.0" minWidth="837.0" prefHeight="553.0" prefWidth="837.0" style="-fx-background-radius: 50px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloController">
+   <children>
+      <Pane layoutX="30.0" layoutY="40.0" prefHeight="490.0" prefWidth="397.0" style="-fx-background-color: #EAECEF; -fx-background-radius: 20px;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="46.0">
+         <children>
+            <ImageView fitHeight="224.0" fitWidth="314.0" layoutX="86.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logoo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="561.0" layoutY="238.0" prefHeight="74.0" prefWidth="136.0" text="Taskly" AnchorPane.rightAnchor="152.0">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.4941176474094391" blue="0.7019608020782471" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.009421265141318991">
+                     <color>
+                        <Color red="1.0" green="0.4941176474094391" blue="0.7019608020782471" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4804878048780487">
+                     <color>
+                        <Color red="0.45490196347236633" green="0.7529411911964417" blue="0.9882352948188782" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5176470875740051" green="0.9803921580314636" blue="0.6901960968971252" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="573.0" layoutY="301.0" prefHeight="26.0" prefWidth="88.0" text="Task Manager" textFill="#949292">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="42.0" layoutX="597.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logoo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="getStartBtn" layoutX="549.0" layoutY="364.0" mnemonicParsing="false" onAction="#switchToMainView" prefHeight="40.0" prefWidth="136.0" style="-fx-background-radius: 100; -fx-background-color: #00AEEF; -fx-border-radius: 100;" styleClass="getStartBtn" stylesheets="@../css/style.css" text="Get started" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <HBox layoutX="-1.0" layoutY="1.0" prefHeight="26.0" prefWidth="837.0" style="-fx-background-color: #f0f0f0;">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="74.0" spacing="8" style="-fx-padding: 5px;">
+               <children>
+                  <Button fx:id="closeButton" onAction="#closeApp" style="-fx-background-color: #FF5F57; -fx-background-radius: 50%; -fx-min-width: 14px; -fx-min-height: 14px; -fx-border-width: 0;" />
+                  <Button fx:id="minimizeButton" style="-fx-background-color: #FFBD2E; -fx-background-radius: 50%; -fx-min-width: 14px; -fx-min-height: 14px; -fx-border-width: 0;" />
+                  <Button fx:id="maximizeButton" style="-fx-background-color: #28C840; -fx-background-radius: 50%; -fx-min-width: 14px; -fx-min-height: 14px; -fx-border-width: 0;" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+
+   </children>
+</AnchorPane>

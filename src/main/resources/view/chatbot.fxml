@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChatbotController">
+   <children>
+      <Pane layoutX="180.0" layoutY="405.0" prefHeight="64.0" prefWidth="515.0" styleClass="panei" stylesheets="@../css/style.css">
+         <children>
+            <TextField fx:id="inputField" layoutX="14.0" layoutY="15.0" prefHeight="34.0" prefWidth="438.0" promptText="Nhập tin nhắn..." style="-fx-background-color: transparent;">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Button layoutX="460.0" layoutY="12.0" onAction="#handleSendMessage" prefHeight="41.0" prefWidth="44.0" style="-fx-background-color: #e7e7e7; -fx-background-radius: 30px;" textFill="#e7e7e7">
+               <graphic>
+                  <FontAwesomeIcon fill="#636363" glyphName="ARROW_UP" selectionFill="#696969" text="" />
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="18.0" prefHeight="74.0" prefWidth="162.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-font-size: 25px;" text="Chatbot AI">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.4941176474094391" blue="0.7019608020782471" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.521951219512195">
+                     <color>
+                        <Color red="0.45490196347236633" green="0.7529411911964417" blue="0.9882352948188782" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5176470875740051" green="0.9803921580314636" blue="0.6901960968971252" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextArea fx:id="chatArea" editable="false" layoutX="180.0" layoutY="72.0" prefHeight="322.0" prefWidth="515.0" style="-fx-effect: dropshadow(gaussian, rgb(131, 131, 131), 10, 0.1, 0, 0);" wrapText="true" />
+      <TableView fx:id="conversationTable" layoutX="6.0" layoutY="72.0" prefHeight="322.0" prefWidth="162.0" style="-fx-effect: dropshadow(gaussian, rgb(131, 131, 131), 5, 0.1, 0, 0);">
+         <columns>
+            <TableColumn fx:id="titleColumn" prefWidth="161.5999878883362" text="Danh sách trò chuyện" />
+         </columns>
+      </TableView>
+      <Button layoutX="6.0" layoutY="416.0" onAction="#handleAddConversation" prefHeight="41.0" prefWidth="74.0" style="-fx-background-color: #41b3d9; -fx-background-radius: 10px;" text="➕ Thêm" textFill="#f2f2f2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="92.0" layoutY="416.0" onAction="#handleDeleteConversation" prefHeight="41.0" prefWidth="74.0" style="-fx-background-color: red; -fx-background-radius: 10px;" stylesheets="@../css/style.css" text="🗑️ Xóa" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

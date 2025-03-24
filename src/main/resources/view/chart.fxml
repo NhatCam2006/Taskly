@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.ChartController">
+    <PieChart fx:id="taskPieChart" layoutY="89.0" prefHeight="398.0" prefWidth="723.0" />
+   <Label layoutX="238.0" layoutY="14.0" prefHeight="62.0" prefWidth="246.0" text="Bảng thống kê">
+      <font>
+         <Font name="Comic Sans MS Bold" size="34.0" />
+      </font>
+      <textFill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" green="0.4941176474094391" blue="0.7019608020782471" />
+                  </color>
+               </Stop>
+               <Stop offset="0.4902439024390244">
+                  <color>
+                     <Color red="0.45490196347236633" green="0.7529411911964417" blue="0.9882352948188782" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.5176470875740051" green="0.9803921580314636" blue="0.6901960968971252" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Label>
+</AnchorPane>
