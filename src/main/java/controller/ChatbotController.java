@@ -38,7 +38,8 @@ public class ChatbotController {
 
     private final ObservableList<Conversation> conversations = FXCollections.observableArrayList();
     private int selectedConversationId = -1;
-    private static final String API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyCxE4zuJlZPQfoOuhpIh3ZZTEHNwcPyjdQ";
+    private static final String API_KEY = ""; // Điền API Key Gemini của bạn ở đây
+    private static final String API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + API_KEY;
     private final OkHttpClient client = new OkHttpClient();
 
     @FXML
@@ -224,6 +225,9 @@ public class ChatbotController {
 
 
     private String sendMessage(String userMessage) {
+        if (API_KEY.isEmpty()) {
+            return "❌ Chưa cấu hình API Key cho Gemini. Hãy điền khóa API của bạn vào biến API_KEY trong tệp ChatbotController.java!";
+        }
         JSONObject requestBody = new JSONObject();
         JSONArray contents = new JSONArray();
         JSONObject textPart = new JSONObject().put("text", userMessage);
